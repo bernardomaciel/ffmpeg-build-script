@@ -271,7 +271,7 @@ build "ffmpeg"
 download "http://ffmpeg.org/releases/ffmpeg-3.2.4.tar.bz2 " "ffmpeg-3.2.4.tar.bz2 "
 cd $PACKAGES/ffmpeg* || exit
 CFLAGS="-I$WORKSPACE/include" LDFLAGS="-L$WORKSPACE/lib" 
-execute ./configure --arch=x86 --prefix=${WORKSPACE} --extra-cflags="-I$WORKSPACE/include" --extra-ldflags="-L$WORKSPACE/lib" \
+execute ./configure --arch=64 --prefix=${WORKSPACE} --extra-cflags="-I$WORKSPACE/include" --extra-ldflags="-L$WORKSPACE/lib" \
 	--extra-version=static \
 	--extra-cflags=--static \
 	--enable-static \
